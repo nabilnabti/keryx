@@ -1,13 +1,16 @@
 'use client';
 
-import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { Navigation } from '@/components/navigation';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 
 export default function FAQPage() {
-    const searchParams = useSearchParams();
-    const industry = searchParams.get('industry') || 'restaurant';
+    const [industry, setIndustry] = useState<string>('restaurant');
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const ind = params.get('industry');
+        if (ind) setIndustry(ind);
+    }, []);
 
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
