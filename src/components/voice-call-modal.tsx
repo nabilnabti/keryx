@@ -164,9 +164,8 @@ export function VoiceCallModal({ isOpen, onClose, agentId, primaryColor = '#E11D
                 <div className="glass-panel rounded-2xl border-2 p-8 shadow-2xl" style={{ borderColor: `${primaryColor}4D`, backgroundColor: 'rgba(11, 14, 20, 0.95)' }}>
                     {/* Icon */}
                     <div className="flex justify-center mb-6">
-                        <div className="w-20 h-20 rounded-full flex items-center justify-center relative" style={{ backgroundColor: `${primaryColor}33` }}>
-                            <div className={`absolute inset-0 rounded-full ${isConnected ? 'animate-pulse' : ''}`} style={{ backgroundColor: `${primaryColor}4D` }}></div>
-                            <Image src="/keryx-logo.png" alt="KERYX" width={48} height={48} className="relative z-10" />
+                        <div className="relative">
+                            <Image src="/keryx-logo.png" alt="KERYX" width={80} height={80} className="relative z-10" />
                         </div>
                     </div>
 

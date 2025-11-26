@@ -13,10 +13,12 @@ export function Navigation() {
     const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
     const industries = [
+        { name: 'Restaurant / Pizzeria', href: '/', emoji: '🍕' },
         { name: 'Médecin', href: '/industries/medecin', emoji: '🩺' },
         { name: 'Plombier', href: '/industries/plombier', emoji: '🔧' },
         { name: 'Garagiste', href: '/industries/garagiste', emoji: '🚗' },
         { name: 'Coiffeur', href: '/industries/coiffeur', emoji: '✂️' },
+        { name: 'Agent Immobilier', href: '/industries/agent-immobilier', emoji: '🏠' },
     ];
 
     return (
@@ -24,13 +26,8 @@ export function Navigation() {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#E11D48' }}>
-                            <span className="text-2xl">🎙️</span>
-                        </div>
-                        <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-[#F97316]">
-                            KERYX
-                        </span>
+                    <Link href="/" className="flex items-center gap-3">
+                        <Logo />
                     </Link>
 
                     {/* Desktop Menu */}

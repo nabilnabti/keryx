@@ -32,16 +32,15 @@ export function Logo() {
         bgColor = '#EC4899'; // pink
         gradientFrom = '#EC4899';
         gradientTo = '#A855F7';
+    } else if (pathname.startsWith('/industries/agent-immobilier')) {
+        bgColor = '#10B981'; // emerald green
+        gradientFrom = '#10B981';
+        gradientTo = '#34D399';
     }
 
     return (
-        <Link href="/" className="flex items-center gap-2">
-            <div
-                className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: bgColor }}
-            >
-                <Image src="/keryx-logo.png" alt="KERYX" width={32} height={32} />
-            </div>
+        <Link href="/" className="flex items-center gap-3">
+            <Image src="/keryx-logo.png" alt="KERYX" width={40} height={40} />
             <span
                 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r"
                 style={{ backgroundImage: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})` }}
