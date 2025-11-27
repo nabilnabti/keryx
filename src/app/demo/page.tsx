@@ -15,8 +15,8 @@ export default function DemoPage() {
         agentId: 'agent_aa89ef544fd0a04e13e6f6a301',
 
         // Informations du métier
-        businessType: 'Restaurant',
-        businessIcon: '🍕',
+        businessType: 'Votre Entreprise',
+        businessIcon: '🎯',
 
         // Couleurs du thème (format hex)
         primaryColor: '#E11D48',
@@ -28,11 +28,11 @@ export default function DemoPage() {
 
         // Caractéristiques spécifiques au métier
         features: [
-            'Prise de commandes automatique',
-            'Réservations 24/7',
-            'Réponses aux questions menu',
-            'Gestion des allergies',
-            'Confirmation par SMS',
+            'Réponses automatiques 24/7',
+            'Prise de rendez-vous intelligente',
+            'Qualification des demandes',
+            'Gestion des informations clients',
+            'Suivi et confirmation automatique',
         ]
     };
 
