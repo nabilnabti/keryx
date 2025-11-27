@@ -8,10 +8,14 @@ import { FeaturesGridSection } from '@/components/landing/features-grid';
 import { TestimonialsSection } from '@/components/landing/testimonials';
 import { FinalCTASection } from '@/components/landing/final-cta';
 import { Navigation } from '@/components/navigation';
+import { AnimatedBackground } from '@/components/ui/animated-background';
 
 export default function LandingPage() {
     return (
-        <main className="min-h-screen" style={{ backgroundColor: '#0B0E14' }}>
+        <main className="min-h-screen relative" style={{ backgroundColor: '#0B0E14' }}>
+            {/* Animated Background */}
+            <AnimatedBackground />
+
             {/* Navigation */}
             <Navigation />
             {/* 1. Hero Section */}

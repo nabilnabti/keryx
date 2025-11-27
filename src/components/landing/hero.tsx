@@ -35,7 +35,7 @@ export function Hero() {
             <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
                 <div className="max-w-5xl mx-auto text-center">
                     {/* Trust badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-white/10 mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-white/10 mb-8 animate-fade-in">
                         <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#22C55E' }}></div>
                         <span className="text-sm" style={{ color: '#F3F4F6' }}>
                             Disponible 24/7 • Installation rapide • Zéro appel manqué
@@ -43,21 +43,21 @@ export function Hero() {
                     </div>
 
                     {/* H1 */}
-                    <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight" style={{ color: '#F3F4F6' }}>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight animate-fade-in-up animation-delay-100" style={{ color: '#F3F4F6' }}>
                         Vous perdez des commandes{' '}
-                        <span style={{ color: '#E11D48' }}>tous les jours</span>.
+                        <span className="gradient-text-primary">tous les jours</span>.
                         <br />
                         Votre assistant IA répond à vos clients{' '}
-                        <span style={{ color: '#F97316' }}>à votre place</span>.
+                        <span className="gradient-text-shine">à votre place</span>.
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style={{ color: '#9CA3AF' }}>
+                    <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200" style={{ color: '#9CA3AF' }}>
                         Un assistant vocal intelligent prend vos <span style={{ color: '#F3F4F6' }}>commandes téléphoniques</span> et vos <span style={{ color: '#F3F4F6' }}>réservations de table 24/7</span>, sans jamais laisser un client attendre.
                     </p>
 
                     {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 animate-fade-in-up animation-delay-300">
                         <a
                             href="#"
                             target="_blank"
@@ -65,7 +65,7 @@ export function Hero() {
                         >
                             <Button
                                 size="lg"
-                                className="text-lg px-10 py-7 rounded-full font-bold shadow-2xl hover:scale-105 transition-all"
+                                className="text-lg px-10 py-7 rounded-full font-bold shadow-2xl hover:scale-105 transition-all pulse-glow"
                                 style={{
                                     backgroundColor: '#E11D48',
                                     color: '#F3F4F6'
@@ -80,7 +80,7 @@ export function Hero() {
                             variant="outline"
                             size="lg"
                             onClick={() => setIsCallModalOpen(true)}
-                            className="text-lg px-10 py-7 rounded-full font-bold glass-panel border-2 hover:scale-105 transition-all"
+                            className="text-lg px-10 py-7 rounded-full font-bold glass-panel border-2 hover:scale-105 hover-glow transition-all"
                             style={{
                                 borderColor: '#F97316',
                                 color: '#F97316'
@@ -92,7 +92,7 @@ export function Hero() {
                     </div>
 
                     {/* Trust indicators */}
-                    <div className="flex flex-wrap items-center justify-center gap-8 text-sm" style={{ color: '#9CA3AF' }}>
+                    <div className="flex flex-wrap items-center justify-center gap-8 text-sm animate-fade-in animation-delay-400" style={{ color: '#9CA3AF' }}>
                         <div className="flex items-center gap-2">
                             <span style={{ color: '#22C55E' }}>✓</span>
                             Sans engagement

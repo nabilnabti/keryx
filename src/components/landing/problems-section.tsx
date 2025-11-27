@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import { Phone, AlertCircle, TrendingDown, Clock, FileX, Users, Ban } from 'lucide-react';
 
 export function ProblemsSection() {
@@ -47,49 +48,56 @@ export function ProblemsSection() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#0B0E14] via-[#1F2937] to-[#0B0E14]"></div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F3F4F6' }}>
-                        Ce que vivent tous les restaurateurs aujourd'hui
-                    </h2>
-                </div>
+                <ScrollAnimation animation="fade-in-up">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F3F4F6' }}>
+                            Ce que vivent tous les restaurateurs aujourd'hui
+                        </h2>
+                    </div>
+                </ScrollAnimation>
 
                 {/* Problems Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
                     {problems.map((problem, index) => {
                         const Icon = problem.icon;
                         return (
-                            <div
+                            <ScrollAnimation
                                 key={index}
-                                className="glass-panel p-6 rounded-xl border border-red-500/20 bg-red-500/5 hover:border-red-500/40 transition-all group"
+                                animation="scale-in"
+                                delay={index * 100}
                             >
-                                <div className="flex items-start gap-4">
-                                    <div className={`w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/20 transition-all`}>
-                                        <Icon className={`w-6 h-6 ${problem.color}`} />
+                                <div className="glass-panel p-6 rounded-xl border border-red-500/20 bg-red-500/5 hover:border-red-500/40 transition-all group hover-lift">
+                                    <div className="flex items-start gap-4">
+                                        <div className={`w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/20 transition-all`}>
+                                            <Icon className={`w-6 h-6 ${problem.color}`} />
+                                        </div>
+                                        <p className="text-lg font-medium" style={{ color: '#F3F4F6' }}>
+                                            {problem.title}
+                                        </p>
                                     </div>
-                                    <p className="text-lg font-medium" style={{ color: '#F3F4F6' }}>
-                                        {problem.title}
-                                    </p>
                                 </div>
-                            </div>
+                            </ScrollAnimation>
                         );
                     })}
                 </div>
 
                 {/* CTA */}
-                <div className="text-center">
-                    <Link href="#solution">
-                        <Button
-                            size="lg"
-                            className="text-lg px-8 py-6 rounded-full font-semibold"
-                            style={{
-                                backgroundColor: '#E11D48',
-                                color: '#F3F4F6'
-                            }}
-                        >
-                            Voir la solution
-                        </Button>
-                    </Link>
-                </div>
+                <ScrollAnimation animation="fade-in-up" delay={700}>
+                    <div className="text-center">
+                        <Link href="#solution">
+                            <Button
+                                size="lg"
+                                className="text-lg px-8 py-6 rounded-full font-semibold hover-glow"
+                                style={{
+                                    backgroundColor: '#E11D48',
+                                    color: '#F3F4F6'
+                                }}
+                            >
+                                Voir la solution
+                            </Button>
+                        </Link>
+                    </div>
+                </ScrollAnimation>
             </div>
         </div>
     );
