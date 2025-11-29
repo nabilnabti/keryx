@@ -13,7 +13,7 @@ export function Navigation() {
     const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
     const industries = [
-        { name: 'Restaurant / Pizzeria', href: '/', emoji: '🍕' },
+        { name: 'Restaurant / Pizzeria', href: '/industries/restaurant', emoji: '🍕' },
         { name: 'Médecin', href: '/industries/medecin', emoji: '🩺' },
         { name: 'Plombier', href: '/industries/plombier', emoji: '🔧' },
         { name: 'Garagiste', href: '/industries/garagiste', emoji: '🚗' },
